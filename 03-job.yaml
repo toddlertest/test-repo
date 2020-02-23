@@ -1,18 +1,18 @@
 ---
 jobs:
   - script: >
-    folder('test-folder')
+      folder('test-folder')
   - script: >
-    pipelineJob('test-folder/test-job') {
-      definition {
-        cpsScm {
-          git {
-            remote {
-              url('git@git-repo.com:test/test.git')
-              credentials('git-repo-key')  
+      pipelineJob('test-folder/test-job') {
+        definition {
+          cpsScm {
+            git {
+              remote {
+                url('git@git-repo.com:test/test.git')
+                credentials('git-repo-key')
+              }
+              branch('master')
             }
-            branch('master')
           }
         }
       }
-    }

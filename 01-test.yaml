@@ -13,9 +13,9 @@ unclassified:
                 repoOwner: "poulad"
                 repository: "Jenkins-Pipeline-Tester"
                 traits:
-                - branchDiscoveryTrait:
+                - gitBranchDiscovery:
                     strategyId: 1
-                - originPullRequestDiscoveryTrait:
+                - gitHubPullRequestDiscovery:
                     strategyId: 1
-                - forkPullRequestDiscoveryTrait:
+                - gitHubForkDiscovery:
                     strategyId: 1

@@ -1,0 +1,30 @@
+---
+### Environment variables
+jenkins:
+  globalNodeProperties:
+    - envVars:
+        env:
+          # Test variables
+          - key: 'TEST-VAR-1'
+            value: test-value-1
+          - key: 'TEST-VAR-2'
+            value: test-value-2
+jobs:
+  - script: >
+      folder('test-folder')
+  - script: >
+      pipelineJob('test-folder/test-job') {
+        definition {
+          cpsScm {
+            scm {
+              git {
+                remote {
+                  url('git@git-repo.com:test/test.git')
+                  credentials('git-repo-key')
+                }
+                branch('master')
+              }
+            }
+          }
+        }
+      }

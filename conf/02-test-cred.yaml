@@ -1,0 +1,14 @@
+---
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+        - basicSSHUserPrivateKey:
+            scope: GLOBAL
+            id: 'git-repo-key'
+            username: 'jenkins'
+            passphrase: ''
+            description: 'SSH key placeholder'
+            privateKeySource:
+              directEntry:
+                privateKey: 'ssh-rsa blablablabla'

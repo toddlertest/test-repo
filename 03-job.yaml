@@ -2,7 +2,7 @@
 jobs:
   - script: >
     folder('test-folder')
-    
+  - script: >
     pipelineJob('test-folder/test-job') {
       definition {
         cpsScm {

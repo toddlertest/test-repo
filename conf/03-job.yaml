@@ -1,6 +1,6 @@
 ---
 jobs:
-  - script:>
+  - script: >
     folder('test-folder')
     
     pipelineJob('test-folder/test-job') {
